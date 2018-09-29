@@ -24,9 +24,11 @@ import PackageDescription
 
 var targetDependencies: [Target.Dependency] = []
 
+/*
 #if os(Linux)
 targetDependencies.append(.target(name: "OpenSSL"))
 #endif
+*/
 
 var targets: [Target] = [
     .target(
@@ -37,12 +39,13 @@ var targets: [Target] = [
         name: "CryptorTests",
         dependencies: ["Cryptor"]),
 ]
-
+/*
 #if os(Linux)
 targets.append(
     .systemLibrary(name: "OpenSSL")
 )
 #endif
+*/
 
 let package = Package(
     name: "Cryptor",
